@@ -26,7 +26,7 @@ pipeline {
           stage('Running docker compose') {
             steps {
                 echo 'Run through docker-compose.yml'
-                sh 'docker-composer build'
+                sh 'docker-compose build'
                 sh 'docker-compose up -d'
                 sh 'docker images'
                 echo 'Done'
