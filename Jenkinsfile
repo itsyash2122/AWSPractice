@@ -5,8 +5,8 @@ pipeline {
         stage('Creating php Image') {
             steps {
                 echo 'Creating my-php image through Dockerfile in php'
-                sh 'cd php'
-                sh 'docker build -t my-php .'
+         
+                sh 'docker build -t my-php ./php'
                 echo 'Done my-php'
             }
         }
