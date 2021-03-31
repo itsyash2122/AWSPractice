@@ -29,7 +29,7 @@ pipeline {
           stage('Running docker compose') {
             steps {
                 echo 'Run through docker-compose.yml'
-                sh 'apt-get install docker-compose'
+               
                 sh 'cd ./app'
                 sh 'docker-compose build'
                 sh 'docker-compose up -d'
