@@ -26,8 +26,8 @@ pipeline {
             steps {
                 echo 'Run through docker-compose.yml'
                
-                sh 'cd ./app'
-                sh 'cat docker-compose.yml'
+                
+                sh 'cat ./app/docker-compose.yml'
                 sh 'docker images'
                 echo 'Done'
                 
