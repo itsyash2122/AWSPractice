@@ -1,5 +1,8 @@
 pipeline {
     agent any
+     environment {
+        COMPOSE_PROJECT_NAME = "${BUILD_ID}"
+    }
 
     stages {
         stage('Creating php Image') {
