@@ -28,7 +28,7 @@ pipeline {
                
                 
                 sh 'cat ./app/docker-compose.yml'
-                sh './app/docker-compose up -d'
+                sh 'docker-compose ps'
                 sh 'docker images'
                 echo 'Done'
                 
