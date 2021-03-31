@@ -1,7 +1,7 @@
 pipeline {
     agent any
      environment {
-        PATH = "$PATH:/usr/local/bin"
+        PATH = "$PATH:/usr/bin"
     }
 
     stages {
@@ -31,8 +31,7 @@ pipeline {
                 echo 'Run through docker-compose.yml'
                
                 sh 'cd ./app'
-                sh 'docker-compose build'
-                sh 'docker-compose up -d'
+                sh '/usr/bin/docker-compose up --build -d'
                 sh 'docker images'
                 echo 'Done'
                 
