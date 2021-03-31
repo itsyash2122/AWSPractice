@@ -1,7 +1,7 @@
 pipeline {
     agent any
      environment {
-        COMPOSE_PROJECT_NAME = "${BUILD_ID}"
+        PATH = "$PATH: ./app"
     }
 
     stages {
